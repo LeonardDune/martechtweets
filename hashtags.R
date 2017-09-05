@@ -29,7 +29,7 @@ tweets <- searchTwitter(search_term, number_of_tweets )
 
 #convert received data to something PowerBi understands
 df_tweets <- twListToDF(tweets)
-28
+
 #column cleanup
 #df_tweets <- df_tweets[,c("text","favorited","favoriteCount","created","retweetCount","isRetweet","retweeted")]
 df_tweets$text <- stri_encode(df_tweets$text, "", "UTF-8")
